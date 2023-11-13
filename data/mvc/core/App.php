@@ -14,6 +14,8 @@ http://mvc.local/user/show/1
 // user -> UserController ; (ucword
 */
 
+namespace Core;
+
 
 class App
 {
@@ -55,7 +57,8 @@ class App
         }
 
         //CREAR INSTANCIA DEL CONTROLADOR Y LLAMAR AL METODO
-        $controllerObject = new $controllerName;
+        $controllerName = "\\App\\Controllers\\" . $controllerName;
+        $controllerObject = new $controllerName; //new \App\Controllers\UserController
         //verificar si existe el metood de la peticion en la clase/controlador
         if(method_exists($controllerObject, $method)){
             //invocarlo
@@ -65,7 +68,6 @@ class App
             echo "Funcion no encontrada";
             die();
         }
-
 
 
     }//Fin de constructor
