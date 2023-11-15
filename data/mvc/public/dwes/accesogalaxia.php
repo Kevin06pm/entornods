@@ -14,7 +14,7 @@ $gl = new galaxia();
 galaxia::muerte(); 
 
 echo "<h2> Acceso Cualificado</h2>"; ///ABsoluto desde mi ubicacion
-Galaxiaenana\observar("Los 3 pilares"); ///Barra del paquete (nameSoace)/ constante
+Galaxiaenana\observar("Los 3 pilares"); ///Barra del paquete (nameSoace)/ recurso a utilizar (observar)
 echo "<br>EL radio es " . Galaxiaenana\RADIO;
 $gl = new Galaxiaenana\galaxia();
 Galaxiaenana\galaxia::muerte();

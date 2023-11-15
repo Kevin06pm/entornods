@@ -57,7 +57,7 @@ class App
         }
 
         //CREAR INSTANCIA DEL CONTROLADOR Y LLAMAR AL METODO
-        $controllerName = "\\App\\Controllers\\" . $controllerName;
+        $controllerName = "\\App\\Controllers\\" . $controllerName; //nameSpace modo
         $controllerObject = new $controllerName; //new \App\Controllers\UserController
         //verificar si existe el metood de la peticion en la clase/controlador
         if(method_exists($controllerObject, $method)){

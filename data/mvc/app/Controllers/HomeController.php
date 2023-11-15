@@ -10,13 +10,15 @@ class HomeController
 
     function index(){
         echo "<br>En el INDEX de HOME";
-        require "viewsController/index.php";
+        require "../viewsController/home/index.php";
+
 
     }
 
     function show(){
         echo "<br>En el SHOW de HOME";
-        require "viewsController/show.php";
+        require "../viewsController/home/show.php";
+
 
     }
     

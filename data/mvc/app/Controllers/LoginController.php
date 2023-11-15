@@ -10,13 +10,14 @@ class LoginController
 
     function index(){
         echo "<br>En el INDEX de LOGIN";
-        require "viewsController/index.php";
+        require "../viewsController/login/index.php";
 
     }
 
     function show(){
         echo "<br>En el SHOW de LOGIN";
-        require "viewsController/show.php";
+        require "../viewsController/login/show.php";
+
 
     }
     
