@@ -1,5 +1,7 @@
 <?php
 
+    //Este user nos cenecta a un array
+
     class User //MODEL
     {
         const USERS = [ //array multidimensional

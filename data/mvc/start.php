@@ -1,9 +1,13 @@
  <?php
 
-//nameSpace modo
-require "core/App.php";
-    
-$app = new Core\App(); //Crea el enrutador
+    //nameSpace modo
+    require "core/App.php";
+    $app = new Core\App(); //Crea el enrutador
+
+    //require "core/Model.php";
+        
+
+    //Core\Model::db(); //Probar si funciona Model core
 
 
     /*
