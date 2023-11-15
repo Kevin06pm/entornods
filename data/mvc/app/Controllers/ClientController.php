@@ -10,7 +10,8 @@ class ClientController
 
     function index(){
         echo "<br>En el INDEX de CLIENT";
-        require "viewsController/index.php";
+        require "../viewsController/client/index.php";
+
 
     }
 

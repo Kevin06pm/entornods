@@ -83,7 +83,7 @@
         //con QUESTION MARK PLACEHOLDE (IMPORTA EL ORDEN)
 
         /*
-        $statement -> bindParam(1, $id);
+        $statement -> bindParam(1, $id); //ASIGNAR UNA REFERECNIA A ESE VALOR //pued emodificar valor modificado
         $statement -> bindParam(2, $nombre);
         $statement -> bindParam(3, $direccion);
         $statement -> bindParam(4, $edad);
@@ -92,7 +92,7 @@
         $nombre = "Alfredo"; */
 
         //BINDVALUE SE QUEDA EL PRIMERO VALOR QUE HAYA ENTRE DOS IGUALES
-        $statement -> bindValue(1, $id); //EL ORDE ES INDIFERENTE
+        $statement -> bindValue(1, $id); //EL ORDE ES INDIFERENTE y NO SE PUEDE CAMBIAR EL VALOR
         $statement -> bindValue(2, $nombre);
         $statement -> bindValue(3, $direccion);
         $statement -> bindValue(4, $edad);
