@@ -4,6 +4,11 @@
     require "core/App.php";
     $app = new Core\App(); //Crea el enrutador
 
+    require "app/models/User.php"; 
+    use App\Models\User;//importar user
+        $user = new User(); //creo un objeto
+        $user -> insert(); //llamo al metodo
+
     //require "core/Model.php";
         
 
