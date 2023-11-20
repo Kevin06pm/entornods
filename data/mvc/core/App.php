@@ -14,6 +14,11 @@ http://mvc.local/user/show/1
 // user -> UserController ; (ucword
 */
 
+
+//APP htAccess -> Lo que hace es buscar metodos
+//lo que hacemos normalmente (haces uso de get...)// mvc.local/index.php?url=/user/show/1
+//APP -> // mvc.local/user/show/1
+
 namespace Core;
 
 
@@ -60,12 +65,13 @@ class App
         $controllerName = "\\App\\Controllers\\" . $controllerName; //nameSpace modo
         $controllerObject = new $controllerName; //new \App\Controllers\UserController
         //verificar si existe el metood de la peticion en la clase/controlador
-        if(method_exists($controllerObject, $method)){
+        if(method_exists($controllerObject, $method)){ //existe en el controlador ese metodo?
             //invocarlo
-            $controllerObject -> $method($arguments);
-        }else{
+            $controllerObject -> $method($arguments); //  /user/store
+        }else{ //sino = error
             http_response_code(404);
-            echo "Funcion no encontrada";
+            //echo "Funcion no encontrada";
+            require "../viewsController/errors/pageerror.php";
             die();
         }
 

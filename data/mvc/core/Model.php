@@ -14,6 +14,7 @@ use const DSN;
 use const USUARIO;
 use const PASSWORD;
 
+#[\AllowDynamicProperties] //COn esto DEPRECATED, no me saldra mas
 class Model
 {
     static function db(){

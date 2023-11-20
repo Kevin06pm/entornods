@@ -17,7 +17,7 @@ class ClientController
 
     function show(){
         echo "<br>En el SHOW de CLIENT";
-        require "viewsController/show.php";
+        require "../viewsController/client/show.php";
 
     }
     
