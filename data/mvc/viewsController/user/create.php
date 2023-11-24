@@ -8,8 +8,7 @@
 <body>
     <h1>Alta de usuario</h1>
 
-    <form method="post" action="/user/store"> <!--llaman-->
-
+    <form method="post" action="/user/store">
     <div class="form-group">
         <label>Nombre</label>
         <input type="text" name="name" class="form-control">

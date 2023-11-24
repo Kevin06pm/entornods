@@ -45,6 +45,12 @@
                       <td><?php echo $user -> birthdate?></td>
 
                       <td><a href="/user/show/<?php echo $user -> id?>">Ver Usuario</a></td>
+                      <td>&nbsp;</td>
+                      <td><a href="/user/edit/<?php echo $user -> id?>">Modificar</a></td>
+                      <td>&nbsp;</td>
+                      <td><a href="/user/delete/<?php echo $user -> id?>"onclick="return confirm('¿Esta seguro de borrar este usuario?')">Borrar</a></td>
+
+
                   </tr>
 
               <?php } ?>

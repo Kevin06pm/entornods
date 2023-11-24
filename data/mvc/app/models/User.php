@@ -1,7 +1,4 @@
 <?php
-
-//Este user nos va a cobectar a una base de datos
-
 namespace App\Models;
 
 require "../core/Model.php";
@@ -62,19 +59,34 @@ class User extends Model//MODEL
         $statement->bindValue(":apellidos", $this->surname);
         $statement->bindValue(":email", $this->email);
         $statement->bindValue(":fechnac", $this->birthdate);
-
         return $statement->execute();
-
     }
 
-    public function save(){
-        echo "<br> Actualizando un registro..";
+    public function save(){ //actualizando 
+        
+        $dbh = self::db(); //recupero conexion bd
+        $sql = "UPDATE users SET name = :nombre, surname = :apellidos, email = :email, birthdate = :fechnac
+        WHERE id = :id";
+
+        $statement = $dbh->prepare($sql);
+        $statement->bindValue(":id", $this->id);        
+        $statement->bindValue(":nombre", $this->name);
+        $statement->bindValue(":apellidos", $this->surname);
+        $statement->bindValue(":email", $this->email);
+        $statement->bindValue(":fechnac", $this->birthdate);
+        return $statement->execute();
+
+
 
     }
 
     public function delete(){
-        echo "<br> Borrar un registro..";
-
+        
+        $dbh = self::db();
+        $sql = "DELETE FROM users WHERE id = :id";
+        $statement = $dbh->prepare($sql);
+        $statement->bindValue(":id", $this->id);
+        return $statement->execute();
     }
 
 }//finclass

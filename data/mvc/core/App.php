@@ -1,4 +1,5 @@
 <?php
+namespace Core;
 
 
 /*
@@ -19,15 +20,15 @@ http://mvc.local/user/show/1
 //lo que hacemos normalmente (haces uso de get...)// mvc.local/index.php?url=/user/show/1
 //APP -> // mvc.local/user/show/1
 
-namespace Core;
 
 
 class App
 {
     function __construct() 
     {
+      
         // TRANSFORMACION PARA EL CONTROLADOR
-        isset($_GET["url"]) ? $url = $_GET["url"] : $url = "home";
+        isset($_GET["url"]) ? $url = $_GET["url"] : $url = "user";
 
         //opcion2
         /*$url = isset($_GET["url"])? $_GET["url"] : "home";*/
@@ -67,7 +68,7 @@ class App
         //verificar si existe el metood de la peticion en la clase/controlador
         if(method_exists($controllerObject, $method)){ //existe en el controlador ese metodo?
             //invocarlo
-            $controllerObject -> $method($arguments); //  /user/store
+            $controllerObject->$method($arguments); //  /user/store
         }else{ //sino = error
             http_response_code(404);
             //echo "Funcion no encontrada";
