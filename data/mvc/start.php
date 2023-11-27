@@ -1,4 +1,6 @@
 <?php
-  
- require "core/App.php";
- $app = new Core\App();
+
+    require 'vendor/autoload.php'; //ELIMINA LOS REQUIRE
+    
+    $app = new Core\App();
+

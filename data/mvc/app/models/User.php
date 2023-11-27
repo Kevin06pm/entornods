@@ -1,7 +1,7 @@
 <?php
 namespace App\Models;
 
-require "../core/Model.php";
+// require "../core/Model.php";
 
 //importar
 use Core\Model;

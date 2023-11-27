@@ -1,5 +1,23 @@
 <?php
 
+    /*
+
+    CREATE TABLE cervezas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(50) NOT NULL,
+    tipo VARCHAR(10) NOT NULL,
+    graduacion_alcoholica INT NOT NULL CHECK (graduacion_alcoholica >0),
+    pais VARCHAR(60) NOT NULL,
+    precio INT NOT NULL CHECK (precio >0),
+    ruta_imagen VARCHAR(100)
+);
+    
+    */ 
+
+
+    //composer update -> actualizar librerias//actualiza todas las librerias
+    //si quiero volver atras, usaria  compose.lock
+
     //Este user nos cenecta a un array
 
     class User //MODEL
